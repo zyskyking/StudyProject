@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">StudyProject</string>
+    <string name="fragment_one_tv_text">第一个碎片</string>
+    <string name="fragment_two_tv_text">第二个碎片</string>
+    <string name="fragment_three_tv_text">第三个碎片</string>
+</resources>
