@@ -49,28 +49,11 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
 
-        initViewPager();
+
 
     }
 
-    private void initViewPager() {
-//        ArrayList<Fragment> list = new ArrayList<>();
-//        list.add(new FragmentOne());
-//        list.add(new FragmentTwo());
-//        list.add(new FragmentThree());
-//        list.add(new FragmentFour());
-//        MyFragmentPagerAdapter myFragmentPagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), list);
-//        mainViewpager.setPageMargin(80);
 
-        ArrayList<Integer> list= new ArrayList<>();
-        list.add(R.mipmap.aaa);
-        list.add(R.mipmap.bbb);
-        list.add(R.mipmap.ccc);
-        list.add(R.mipmap.eee);
-        MyPagerAdapter myPagerAdapter = new MyPagerAdapter(this, list);
-        mainViewpager.setAdapter(myPagerAdapter);
-        mainViewpager.setPageTransformer(false,new MyScaleTransFormer());
-    }
 
     @OnClick({R.id.main_message_tv, R.id.main_message_btn})
     public void onViewClicked(View view) {
