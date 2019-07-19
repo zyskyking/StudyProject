@@ -1,1 +1,1 @@
-include ':app', ':mystepview', ':mycardviewpager'
+include ':app', ':mystepview', ':mycardviewpager', ':myhandlertest', ':myeventbustest'
