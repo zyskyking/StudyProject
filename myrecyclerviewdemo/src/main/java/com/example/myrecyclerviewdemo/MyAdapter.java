@@ -25,11 +25,21 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item_main_rv,parent,false));
+        if (viewType == 0) {
+            return new MyViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item_main_rv,parent,false));
+        } else {
+            return new MyViewHolder2(LayoutInflater.from(mContext).inflate(R.layout.item_main_rv2,parent,false));
+        }
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+
+//        if (holder instanceof TextViewHolder) {
+//            ((TextViewHolder) holder).mTextView.setText(mTitles[position]);
+//        } else if (holder instanceof ImageViewHolder) {
+//            ((ImageViewHolder) holder).mTextView.setText(mTitles[position]);
+//        }
         holder.titleView.setText(datas.get(position).name);
     }
 
@@ -38,8 +48,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         return datas==null?0:datas.size();
     }
 
-
-
+    @Override
+    public int getItemViewType(int position) {
+        if (position%2==0){
+            return 0;
+        }else{
+            return 1;
+        }
+    }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
@@ -48,6 +64,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             titleView = itemView.findViewById(R.id.item_main_title);
+        }
+    }
+
+    public static class MyViewHolder2 extends MyViewHolder{
+
+        TextView titleView;
+
+        public MyViewHolder2(@NonNull View itemView) {
+            super(itemView);
+            titleView = itemView.findViewById(R.id.item_main_title2);
         }
     }
 }
