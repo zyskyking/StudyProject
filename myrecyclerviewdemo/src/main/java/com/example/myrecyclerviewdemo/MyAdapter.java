@@ -17,6 +17,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     private List<Data> datas;
     private Context mContext;
+
+
     public MyAdapter(Context context,List<Data> datas){
         this.mContext = context;
         this.datas = datas;
@@ -34,12 +36,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
-//        if (holder instanceof TextViewHolder) {
-//            ((TextViewHolder) holder).mTextView.setText(mTitles[position]);
-//        } else if (holder instanceof ImageViewHolder) {
-//            ((ImageViewHolder) holder).mTextView.setText(mTitles[position]);
-//        }
         holder.titleView.setText(datas.get(position).name);
     }
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/cardview_light_background"
+    android:layout_height="match_parent">
+
+
+    <com.example.myrecyclerviewdemo.View.IndexView
+        android:id="@+id/myview"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="60dp"
+        app:text_color="@color/color5"
+        app:text_light_color="@color/color1"
+        app:text_size="14sp"
+        android:background="@color/color3"/>
+
+</RelativeLayout>
