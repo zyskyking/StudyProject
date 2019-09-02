@@ -108,6 +108,7 @@ public class ThirdActivity extends AppCompatActivity {
         RecommendBean2Datas.add(new SelectedBean(2,"BBBB",false));
         RecommendBean2Datas.add(new SelectedBean(3,"CCCC",false));
         RecommendBean2Datas.add(new SelectedBean(4,"DDDD",false));
+        RecommendBean2Datas.add(new SelectedBean(5,"EEEE",false));
 
 
         beans = new ArrayList<>();
@@ -192,7 +193,7 @@ public class ThirdActivity extends AppCompatActivity {
         SelectedBean selectedBean = datas.get(0);
         selectedBean.name = event.name;
         selectedBean.id = event.id;
-        mulitAdapter.notifyDataSetChanged();
+        mulitAdapter.notifyItemChanged(1,event.name);
     }
 
     @Override

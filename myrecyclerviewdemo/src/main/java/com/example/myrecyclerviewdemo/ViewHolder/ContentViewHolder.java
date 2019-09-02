@@ -22,4 +22,9 @@ public class ContentViewHolder extends BaseViewHolder {
     public void bindViewData(Object data) {
         tv.setText(((ContentBean)data).name);
     }
+
+    @Override
+    public void bindViewData(Object data, Object type) {
+        tv.setText(((ContentBean)data).name);
+    }
 }

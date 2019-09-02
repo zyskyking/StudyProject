@@ -45,4 +45,11 @@ public class IndexOptionViewHolder extends BaseViewHolder{
             });
         }
     }
+
+    @Override
+    public void bindViewData(Object data, Object type) {
+        OptionBean bean = (OptionBean) data;
+        titleTv.setText(bean.getTag()+"");
+        contentTv.setText(bean.getName());
+    }
 }

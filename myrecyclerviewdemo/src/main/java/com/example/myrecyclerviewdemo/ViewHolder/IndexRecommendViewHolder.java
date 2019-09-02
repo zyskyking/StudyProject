@@ -20,6 +20,7 @@ public class IndexRecommendViewHolder extends BaseViewHolder {
     private GridView gridView;
     private Context context;
     private RecommendGridClickListener listener;
+    ItemRecommedGridAdapter itemRecommedGridAdapter;
 
     public void setRecommendGridClickListener(RecommendGridClickListener listener) {
         this.listener = listener;
@@ -36,7 +37,7 @@ public class IndexRecommendViewHolder extends BaseViewHolder {
         final RecommendBean bean = (RecommendBean) data;
         if (bean!=null){
             //创建适配器
-            ItemRecommedGridAdapter itemRecommedGridAdapter = new ItemRecommedGridAdapter(context,bean.getDatas());
+            itemRecommedGridAdapter = new ItemRecommedGridAdapter(context,bean.getDatas());
             gridView.setAdapter(itemRecommedGridAdapter);
             gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
@@ -53,5 +54,10 @@ public class IndexRecommendViewHolder extends BaseViewHolder {
                 }
             });
         }
+    }
+
+    @Override
+    public void bindViewData(Object data, Object type) {
+        itemRecommedGridAdapter.notifyDataSetChanged();
     }
 }

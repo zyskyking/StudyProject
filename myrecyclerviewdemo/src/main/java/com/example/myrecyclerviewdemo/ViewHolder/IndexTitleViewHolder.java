@@ -25,4 +25,12 @@ public class IndexTitleViewHolder extends BaseViewHolder {
         }
 
     }
+
+    @Override
+    public void bindViewData(Object data, Object type) {
+        TitleBean titleBean = (TitleBean) data;
+        if (titleBean!=null){
+            tv.setText(titleBean.title);
+        }
+    }
 }

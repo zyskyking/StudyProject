@@ -1,6 +1,7 @@
 package com.example.myrecyclerviewdemo.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import com.example.myrecyclerviewdemo.Factory.ItemTypeFactory;
 import java.util.List;
 
 public class MulitAdapter extends RecyclerView.Adapter<BaseViewHolder> {
+    private static final String TAG =MulitAdapter.class.getSimpleName() ;
     private ItemTypeFactory typeFactory;
     List<IItemBeanVisiable> datas;
 
@@ -35,6 +37,16 @@ public class MulitAdapter extends RecyclerView.Adapter<BaseViewHolder> {
     public void onBindViewHolder(@NonNull BaseViewHolder holder, int position) {
         holder.bindViewData(datas.get(position));
 
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull BaseViewHolder holder, int position, @NonNull List<Object> payloads) {
+        if (payloads.isEmpty()){
+            this.onBindViewHolder(holder,position);
+        }else{
+            Log.i(TAG, "onBindViewHolder: ");
+            holder.bindViewData(datas.get(position),payloads.get(0));
+        }
     }
 
     @Override

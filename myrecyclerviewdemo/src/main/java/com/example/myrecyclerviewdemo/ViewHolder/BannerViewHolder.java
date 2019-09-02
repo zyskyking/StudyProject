@@ -8,6 +8,8 @@ import androidx.annotation.NonNull;
 import com.example.myrecyclerviewdemo.Bean.BannerBean;
 import com.example.myrecyclerviewdemo.R;
 
+import java.util.List;
+
 public class BannerViewHolder extends BaseViewHolder {
 
     private TextView tv;
@@ -19,6 +21,11 @@ public class BannerViewHolder extends BaseViewHolder {
 
     @Override
     public void bindViewData(Object data) {
+        tv.setText(((BannerBean)data).name);
+    }
+
+    @Override
+    public void bindViewData(Object data, Object type) {
         tv.setText(((BannerBean)data).name);
     }
 }
