@@ -19,16 +19,16 @@ public class DefaultLifefulGenerator<Callback> implements LifefulGenerator<Callb
 
     @Override
     public Callback getCallback() {
-        return null;
+        return mCallback;
     }
 
     @Override
     public WeakReference<Lifeful> getLifefulWeakReference() {
-        return null;
+        return mLifefulWeakReference;
     }
 
     @Override
     public boolean isLifefulNull() {
-        return false;
+        return mLifefulIsNull;
     }
 }
