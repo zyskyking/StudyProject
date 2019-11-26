@@ -154,6 +154,8 @@ public class ThirdActivity extends AppCompatActivity {
         mulitAdapter  = new MulitAdapter(beans,this);
         recyclerView.setAdapter(mulitAdapter);
         EventBus.getDefault().register(this);//订阅
+
+        mulitAdapter.notifyItemChanged(mToPosition,true);
     }
 
     private void initView() {

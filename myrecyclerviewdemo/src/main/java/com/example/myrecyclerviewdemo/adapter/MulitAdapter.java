@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myrecyclerviewdemo.MyAdapter;
 import com.example.myrecyclerviewdemo.ViewHolder.BaseViewHolder;
 import com.example.myrecyclerviewdemo.InterFace.IItemBeanVisiable;
 import com.example.myrecyclerviewdemo.Factory.ItemTypeFactory;
@@ -36,7 +37,6 @@ public class MulitAdapter extends RecyclerView.Adapter<BaseViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull BaseViewHolder holder, int position) {
         holder.bindViewData(datas.get(position));
-
     }
 
     @Override

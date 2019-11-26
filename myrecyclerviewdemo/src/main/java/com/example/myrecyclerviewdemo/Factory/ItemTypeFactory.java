@@ -76,7 +76,7 @@ public class ItemTypeFactory implements TypeFactory, RecommendGridClickListener 
                 return indexRecommendViewHolder;
             }
             case third_option_layout:{
-                return new IndexOptionViewHolder(itemView);
+                return new IndexOptionViewHolder(itemView,context);
             }
             default:{
                 return null;
