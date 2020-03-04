@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.tingshuo.myretrofitdemo.Interface.Lifeful;
 import com.tingshuo.myretrofitdemo.RetrofitUtils.DouBanRetrofit;
 
 import butterknife.BindView;
@@ -16,7 +17,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Lifeful {
 
     private static final String TAG = MainActivity.class.getSimpleName();
     @BindView(R.id.main_request_tv)
@@ -52,5 +53,15 @@ public class MainActivity extends AppCompatActivity {
                 douBanRetrofit.getTopInfo(this);
                 break;
         }
+    }
+
+    @Override
+    public boolean isAlive() {
+        return activityIsAlive();
+    }
+
+    private boolean activityIsAlive() {
+
+        return false;
     }
 }

@@ -1,1 +1,1 @@
-include ':app', ':mystepview', ':mycardviewpager', ':myhandlertest', ':myeventbustest', ':mvpdemo', ':jsonobjecedemo', ':immersivemodedemo', ':myrecyclerviewdemo', ':gridviewdemo', ':myretrofitdemo'
+include ':app', ':mycardviewpager', ':myhandlertest', ':myeventbustest', ':mvpdemo', ':jsonobjecedemo', ':immersivemodedemo', ':myrecyclerviewdemo', ':gridviewdemo', ':myretrofitdemo', ':mydialogdemo'

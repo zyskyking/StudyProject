@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="240dp"
+              android:layout_height="60dp">
+
+    <TextView
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginRight="18dp"
+        android:id="@+id/refuse_join_class_reason_message_tv"
+        android:layout_centerInParent="true"
+        android:text="neicongadfkojalkjg"
+        android:textColor="#FEFEFE"
+        android:textSize="13sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/refulse_join_class_dialog_back"
+        android:layout_width="18dp"
+        android:layout_alignParentRight="true"
+        android:onClick="backClick"
+        android:background="@drawable/shape_refulse_join_class_dialog_back"
+        android:layout_height="14dp">
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:src="@mipmap/refulse_join_class_dialog_back"
+            android:layout_width="7dp"
+            android:layout_height="7dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>
